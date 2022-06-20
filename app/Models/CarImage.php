@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class CarImage extends Model
 {
     use HasFactory;
+    protected $table = 'cars_image';
 
-    protected $fillable = ['image_name'];
+    protected $fillable = ['car_id', 'image_name'];
 
     public function car()
     {

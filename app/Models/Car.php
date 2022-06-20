@@ -19,7 +19,7 @@ class Car extends Model
 
     public function carImages()
     {
-        return $this->hasMany(carImages::class,'car_id');
+        return $this->hasMany(CarImage::class,'car_id');
     }
 
     public function rentals()
@@ -27,9 +27,9 @@ class Car extends Model
         return $this->hasMany(Rental::class,'car_id');
     }
 
-    public function spesifications()
+    public function specifications()
     {
-        return $this->belongstoMany(Specification::class,'spesifications_cars','car_id','specification_id')->withTimestamps();
+        return $this->belongstoMany(Specification::class,'specifications_cars','car_id','specification_id')->withTimestamps();
     }
 }
 

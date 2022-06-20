@@ -9,9 +9,4 @@ class Specification extends Model
 {
     use HasFactory;
     protected $fillable = ['name','description'];
-
-    public function cars()
-    {
-        return $this->belongsToMany(Car::class,'spesifications_cars','car_id')->withTimestamps();
-    }
 }

@@ -9,6 +9,8 @@ class User extends Model
 {
     use HasFactory;
 
+    protected $table = 'users';
+
     protected $fillable = ['name','password','email','driver_license','admin','avatar'];
 
     public function rentals()
